@@ -20,6 +20,7 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    ["gh"] = { ":ClangdSwitchSourceHeader<cr>", desc = "Switch to header" },
   },
   t = {
     -- setting a mapping to false will disable it

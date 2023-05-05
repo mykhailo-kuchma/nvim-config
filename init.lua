@@ -48,9 +48,21 @@ return {
       --   return true
       -- end
     },
+    setup_handlers = {
+      -- add custom handler
+      clangd = function(_, opts) require("clangd_extensions").setup {  server = opts } end
+    },
     -- enable servers that you already have installed without mason
     servers = {
       -- "pyright"
+    },
+
+    config = {
+      clangd = {
+        capabilities = {
+          offsetEncoding = "utf-8",
+        },
+      },
     },
   },
 
